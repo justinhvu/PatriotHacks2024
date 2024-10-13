@@ -6,7 +6,8 @@ import loc from "./images/loc.png";
 import justinc from "./images/justinc.png";
 import justinv from "./images/justinv.png";
 import React, { useState, useEffect } from "react";
-import {CyberEl12, CyberEl79, CyberEl77, CyberEl51, CyberEl87} from 'react-cyber-elements';
+import {CyberEl12, CyberEl79, CyberEl77, CyberEl51,} from 'react-cyber-elements';
+import Starfield from 'react-starfield';
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
   function isLoading() {
     if (targetFound) {
       document.getElementById("finding-target").innerHTML = "TARGET FOUND";
+      document.getElementById("finding-target").style.color = "green";
       document.getElementById("action-container").style.display = "flex";
     }
   }
@@ -76,6 +78,13 @@ function App() {
   return (
     <body>
     <div className="App" id="App">
+
+    <Starfield
+        starCount={1300}
+        starColor={[255, 255, 255]}
+        speedFactor={0.15}
+        backgroundColor="black"
+      />
 
     {/* <CyberEl83 className="map" /> */}
 
@@ -119,7 +128,7 @@ function App() {
       <div className="action-container" id="action-container">
         
         <button className="attack-button" onClick={() => {setActionOption(1);liveView()}}>🗡 ATTACK 🗡</button>
-
+        
         <button className="follow-button" onClick={() => {setActionOption(2);liveView()}}>🔎 FOLLOW 🔎</button>
 
       </div>

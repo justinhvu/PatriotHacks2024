@@ -129,33 +129,38 @@
 
 .action-view {
   display: none;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   align-items: center;
   flex-direction: column;
 }
 
 .selected-target {
   display: inline-block;
-  border: 1px solid green;
-  height: 200px;
+  /* border: 1px solid green; */
+  /* height: 100px; */
   width: 200px;
 }
 
 .finding-target {
-
+  font-size: 40px;
+  color: red;
 }
 
 .action-container {
   display: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 15px;
 }
 
 .attack-button {
-
+  font-family: "Audiowide", sans-serif;
 }
 
 .follow-button {
-
+  font-family: "Audiowide", sans-serif;
 }
 
 .live-view {
