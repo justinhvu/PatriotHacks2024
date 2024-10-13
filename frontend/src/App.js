@@ -10,12 +10,13 @@ const aftertext = " . . .";
 
 function App() {
   const [animate, setAnimate] = useState(false);
-  const [appear, setAppear] = useState(false);
   const handleClick = () => {
     setAnimate(true);
-    setAppear(!appear);
+    setTimeout(() => {
+      loadingView();
+      }, 1500);
   };
-
+  
   const [target, setTarget] = useState("");
 
   function selectionView() {
@@ -79,6 +80,16 @@ function App() {
     }, 1000);
   };*/
   
+  const getSelectionPictureClass = (targetPicture) => {
+    if (animate && target !== targetPicture) {
+      return 'slide-out-button';
+    }
+    else if (animate) {
+      return 'enlarge';
+    } else {
+      return ''; // No animation if not animating
+    }
+  };
 
   return (
     <div className="App" id="App">
@@ -93,21 +104,21 @@ function App() {
       <div class='logo-item'>M</div>
     </div>
     
-    <div className="selection-view" id="selection-view">
+    <div className={`selection-view`} id="selection-view">
 
-      <div className="selection-header">Select your target</div>
+      <div className={`selection-header`}>Select your target</div>
       
-      <div className="picture-container">
-        <img class="selection-picture" className={animate ? "slide-out-button" : ""} src={alan} id="alan" onClick={() => {setTarget("alan");dimPictures("alan")}}/>
+      <div className={`picture-container' : ''}`}>
+        <img className={`selection-picture ${getSelectionPictureClass("alan")}`} src={alan} id="alan" onClick={() => {setTarget("alan");dimPictures("alan")}}/>
         <div class = 'divider'></div>
-        <img class="selection-picture" className={animate ? "slide-out-button3":""} src={loc} id="loc" onClick={() => {setTarget("loc");dimPictures("loc")}}/>
+        <img className={`selection-picture ${getSelectionPictureClass("loc")}`} src={loc} id="loc" onClick={() => {setTarget("loc");dimPictures("loc")}}/>
         <div class = 'divider'></div>
-        <img class="selection-picture" className={animate ? "slide-out-button2":""} src={justinc} id="justinc" onClick={() => {setTarget("justinc");dimPictures("justinc")}}/>
+        <img className={`selection-picture ${getSelectionPictureClass("justinc")}`} src={justinc} id="justinc" onClick={() => {setTarget("justinc");dimPictures("justinc")}}/>
         <div class = 'divider'></div>
-        <img class="selection-picture" className={animate ? "slide-out-button4":""} src={justinv} id="justinv" onClick={() => {setTarget("justinv");dimPictures("justinv")}}/>
+        <img className={`selection-picture ${getSelectionPictureClass("justinv")}`} src={justinv} id="justinv" onClick={() => {setTarget("justinv");dimPictures("justinv")}}/>
       </div>
 
-      <div className="lock-on" onClick={() => {loadingView();handleClick()}}>&lt; lock on {target} &gt;</div>
+      <div className="lock-on" onClick={() => {handleClick()}}>&lt; lock on {target} &gt;</div>
 
     </div>
     
