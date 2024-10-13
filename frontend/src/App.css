@@ -97,6 +97,11 @@
   transform: scale(1.4);
 }
 
+.enlarge {
+  transform: translate(50%,-50%);
+  transform: scale(3);
+}
+
 .lock-on {
   color: red;
   font-family: "Audiowide", sans-serif;
@@ -117,8 +122,8 @@
 .selected-target {
   display: inline-block;
   border: 1px solid green;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }
 
 .finding-target {
@@ -126,7 +131,9 @@
 }
 
 .found {
+  padding: 10px 24px;
   font-family: "Audiowide", sans-serif;
+  opacity: 0;
 }
 
 .action-container {
@@ -135,10 +142,12 @@
 }
 
 .action-attack {
+  padding: 10px 24px;
   font-family: "Audiowide", sans-serif;
 }
 
 .action-follow {
+  padding: 10px 24px;
   font-family: "Audiowide", sans-serif;
 }
 
