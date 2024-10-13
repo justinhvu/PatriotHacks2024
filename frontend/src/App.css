@@ -1,38 +1,138 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: default;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  /* border: 1px solid black; */
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  font-size: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-item {
+  display: inline-block;
+  /* border: 1px solid red; */
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+.logo-dot {
+  height: 110px;
+}
+
+.logo-i {
+  width: 70px;
+  height: 140px;
+  font-size: 62px;
+  align-items: center;
+  justify-content: center;
+}
+
+.aim-dot {
+  height: 80px;
+  width: 80px;
+  transition: all .2s ease-in-out;
+}
+
+.aim-dot path:nth-of-type(1) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot path:nth-of-type(2) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot path:nth-of-type(3) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot:hover {
+  transform: scale(1.2)
+}
+
+.selection-view {
+  display: none;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selection-header {
+  text-align: center;
+  font-size: 70px;
+  border: 1px solid red;
+  margin: 1rem;
+  padding: 2rem 2rem;
+}
+
+.picture-container {
+  display: flex;
+  border: 1px solid black;
+}
+
+.selection-picture {
+  display: inline-block;
+  border: 1px solid green;
+  height: 100px;
+  width: 100px;
+  padding-inline: 30px;
+  transition: all .35s ease-in-out;
+}
+
+.selection-picture:hover {
+  transform: scale(1.4);
+}
+
+.lock-on {
+  color: red;
+  transition: all .15s ease-in-out;
+}
+
+.lock-on:hover {
+  transform: scale(1.1);
+}
+
+.action-view {
+  display: none;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selected-target {
+  display: inline-block;
+  border: 1px solid green;
+  height: 200px;
+  width: 200px;
+}
+
+.finding-target {
+
+}
+
+.action-container {
+  display: none;
+  border: 1px solid red;
+}
+
+.action-attack {
+
+}
+
+.action-follow {
+
+}
+
+.live-view {
+  display: none;
 }
