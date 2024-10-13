@@ -1,10 +1,12 @@
 import './App.css';
+import './map.css';
+import './background.css';
 import alan from "./images/alan.png";
 import loc from "./images/loc.png";
 import justinc from "./images/justinc.png";
 import justinv from "./images/justinv.png";
 import React, { useState, useEffect } from "react";
-import {CyberEl12} from 'react-cyber-elements';
+import {CyberEl12, CyberEl79, CyberEl77, CyberEl51, CyberEl87} from 'react-cyber-elements';
 
 function App() {
 
@@ -72,9 +74,14 @@ function App() {
   }
 
   return (
+    <body>
     <div className="App" id="App">
 
+    {/* <CyberEl83 className="map" /> */}
+
     <div className='logo' id="logo">
+      <div><CyberEl51 className="logo-top-left"/></div>
+      <div><CyberEl79 className="logo-top-right"/></div>
       <div className='logo-item'>A</div>
       <div className='logo-item'>
         <div className='logo-dot'>
@@ -82,9 +89,12 @@ function App() {
         <div className='logo-i'>I</div>
       </div>
       <div className='logo-item'>M</div>
+      <div><CyberEl77 className="logo-bottom"/></div>
     </div>
     
     <div className="selection-view" id="selection-view">
+
+      {/* <div><CyberEl87 className="selection-background"/></div> */}
 
       <div className="selection-header">Select your target</div>
       
@@ -120,6 +130,7 @@ function App() {
     </div>
 
     </div>
+    </body>
   );
 }
 export default App;

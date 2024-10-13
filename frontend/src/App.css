@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -6,14 +8,18 @@
   align-items: center;
   justify-content: center;
   cursor: default;
+  background-color: black;
+  color: white;
+  font-family: "Audiowide", sans-serif;
 }
 
 .logo {
-  /* border: 1px solid black; */
-  margin: 1rem;
-  padding: 2rem 2rem;
+  /* border: 1px solid white; */
+  /* margin: 1rem; */
+  padding: 1rem 1rem;
   text-align: center;
   font-size: 120px;
+  align-items: flex-end;
 }
 
 .logo-item {
@@ -28,9 +34,10 @@
 }
 
 .logo-i {
-  width: 70px;
-  height: 140px;
+  width: 78px;
+  height: 148px;
   font-size: 62px;
+  font-weight: 800;
   align-items: center;
   justify-content: center;
 }
@@ -60,29 +67,45 @@
   transform: scale(1.2)
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .aim-dot {
+    animation: aim-dot-spin infinite 10s linear;
+  }
+}
+
+@keyframes aim-dot-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .selection-view {
   display: none;
-  border: 1px solid black;
-  align-items: center;
+  /* border: 1px solid white; */
   flex-direction: column;
+  align-items: center;
 }
 
 .selection-header {
   text-align: center;
   font-size: 70px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 1rem;
   padding: 2rem 2rem;
 }
 
 .picture-container {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid white; */
+  align-items: center;
 }
 
 .selection-picture {
   display: inline-block;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: 100px;
   width: 100px;
   padding-inline: 30px;
@@ -96,6 +119,8 @@
 .lock-on {
   color: red;
   transition: all .15s ease-in-out;
+  padding: 4rem;
+  font-size: 25px;
 }
 
 .lock-on:hover {
@@ -104,7 +129,7 @@
 
 .action-view {
   display: none;
-  border: 1px solid black;
+  border: 1px solid white;
   align-items: center;
   flex-direction: column;
 }
@@ -125,11 +150,11 @@
   border: 1px solid red;
 }
 
-.action-attack {
+.attack-button {
 
 }
 
-.action-follow {
+.follow-button {
 
 }
 

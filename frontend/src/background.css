@@ -1,0 +1,91 @@
+.logo-top-left {
+    width: 30%;
+    height:fit-content;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    fill: red !important;
+    stroke: red;
+}
+
+.logo-top-left path:nth-of-type(1) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(2) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(3) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(4) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(5) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(6) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(7) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(8) {fill: red !important; stroke: white;}
+.logo-top-left path:nth-of-type(9) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(10) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(11) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(12) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(13) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(14) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(15) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(16) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(17) {fill: white !important; stroke: red;}
+.logo-top-left path:nth-of-type(18) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(19) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(20) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(21) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(22) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(23) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(24) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(25) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(26) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(27) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(28) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(29) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(30) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(31) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(32) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(33) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(34) {fill: white !important; stroke: white;}
+.logo-top-left path:nth-of-type(35) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(36) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(37) {fill: white !important; stroke: white}
+.logo-top-left path:nth-of-type(38) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(39) {fill: red !important; stroke: red;}
+.logo-top-left path:nth-of-type(40) {fill: red !important; stroke: red;}
+
+
+.logo-top-right {
+    /* border: 1px solid white; */
+    width: 30%;
+    height:fit-content;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    fill: red !important;
+    stroke: red;
+}
+
+.logo-top-right path:nth-of-type(1) {fill: red !important; stroke: white;}
+.logo-top-right path:nth-of-type(2) {fill: white !important; stroke: red;}
+.logo-top-right path:nth-of-type(3) {fill: white !important; stroke: red;}
+.logo-top-right path:nth-of-type(4) {fill: white !important; stroke: red;}
+.logo-top-right path:nth-of-type(5) {fill: white !important; stroke: red;}
+
+.logo-bottom {
+    /* border: 1px solid white; */
+    width: 99%;
+    height:fit-content;
+    position: absolute;
+    bottom: 1px;
+    left: 0px;
+    fill: red !important;
+    stroke: red;
+}
+
+.logo-bottom path:nth-of-type(1) {fill: white !important;}
+.logo-bottom path:nth-of-type(2) {fill: white !important;}
+.logo-bottom path:nth-of-type(3) {fill: white !important;}
+
+.selection-background {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
