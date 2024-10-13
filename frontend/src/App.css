@@ -1,38 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: default;
+}
+
+.logo {
+  /* border: 1px solid black; */
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  font-size: 120px;
+}
+
+.logo-item {
+  display: inline-block;
+  /* border: 1px solid red; */
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  font-family: "Audiowide", sans-serif;
+}
+
+.logo-dot {
+  height: 110px;
+}
+
+.logo-i {
+  width: 70px;
+  height: 140px;
+  font-size: 62px;
+  align-items: center;
+  justify-content: center;
+}
+
+.aim-dot {
+  height: 80px;
+  width: 80px;
+  transition: all .2s ease-in-out;
+}
+
+.aim-dot path:nth-of-type(1) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot path:nth-of-type(2) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot path:nth-of-type(3) {
+  fill: red !important;
+  stroke: red;
+}
+
+.aim-dot:hover {
+  transform: scale(1.2)
+}
+
+.selection-view {
+  display: none;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selection-header {
+  text-align: center;
+  font-size: 70px;
+  border: 1px solid red;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  font-family: "Audiowide", sans-serif;
+}
+
+.picture-container {
+  display: flex;
+  border: 1px solid black;
+}
+
+.selection-picture {
+  display: inline-block;
+  border: 1px solid green;
+  height: 100px;
+  width: 100px;
+  padding-inline: 30px;
+  transition: all .35s ease-in-out;
+}
+
+.selection-picture:hover {
+  transform: scale(1.4);
+}
+
+.lock-on {
+  color: red;
+  font-family: "Audiowide", sans-serif;
+  transition: all .15s ease-in-out;
+}
+
+.lock-on:hover {
+  transform: scale(1.1);
+}
+
+.action-view {
+  display: none;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selected-target {
+  display: inline-block;
+  border: 1px solid green;
+  height: 200px;
+  width: 200px;
+}
+
+.finding-target {
+  font-family: "Audiowide", sans-serif;
+}
+
+.found {
+  font-family: "Audiowide", sans-serif;
+}
+
+.action-container {
+  display: none;
+  border: 1px solid red;
+}
+
+.action-attack {
+  font-family: "Audiowide", sans-serif;
+}
+
+.action-follow {
+  font-family: "Audiowide", sans-serif;
+}
+
+.live-view {
+  display: none;
+}
+
+.header-text { /*Welcome to AiM text*/
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 0 20px black;
+}
+
+body { /*background-image: url('./background3.avif');*/
+  background-size: cover; /* This makes the background image cover the whole screen */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat; /* This prevents the background image from repeating */
+  padding: 5%;
+  background-attachment: fixed;
+  overflow: hidden; /*no scroll bar when button does animation*/
+}
+
+.divider{ /*Space between the buttons*/
+  width:20px;
+  height:auto;
+  display:inline-block;
+}
+
+#button { /*button before animation*/
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Audiowide", sans-serif;
+  text-shadow: 0 0 2px black;
+}
+
+#button:hover {
+  transform: scale(1.05);
+}
+
+.slide-out-button { /*different delays so 3 different button animations*/
+  -webkit-animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.1s both;
+  animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.1s both;
+}
+
+.slide-out-button2 {
+  -webkit-animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.2s both;
+  animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.2s both;
+}
+
+.slide-out-button3 {
+  -webkit-animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.3s both;
+  animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.3s both;
+}
+
+.slide-out-button4 {
+  -webkit-animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.4s both;
+  animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.4s both;
+}
+
+.fade-out {
+  -webkit-animation: fade-out-bck 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: fade-out-bck 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.text-pop-up {
+  margin: 5%;
+  display: inline-block;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-pop-up span{
+  display: inline-block;
+  animation: text-pop-up-top 2s ease-out infinite both;
+  animation-delay: calc(0.1s*var(--i));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.slide-in {
+  -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@keyframes text-pop-up-top {
+  0%{
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(0);
   }
 }
+
+@-webkit-keyframes fade-out-bck {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-bck {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-out-blurred-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    /*-webkit-filter: blur(0);
+            filter: blur(0);*/
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    /*-webkit-filter: blur(40px);
+            filter: blur(40px);*/
+    opacity: 0;
+  }
+}
+@keyframes slide-out-blurred-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+/*-webkit-filter: blur(0);
+            filter: blur(0);*/
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    /*-webkit-filter: blur(40px);
+            filter: blur(40px);*/
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 0;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes aim-spin{
+  from{
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(360deg)
+  }
+}
+
